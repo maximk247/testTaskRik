@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "login": "ivanov",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Пользователь",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Активен",
+    "salaryAvailability": true
+  },
+  {
+    "id": 2,
+    "login": "aaosipovich",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Пользователь",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Активен",
+    "salaryAvailability": true
+  },
+  {
+    "id": 3,
+    "login": "ivanov",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Администратор",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Заблокирован",
+    "salaryAvailability": true
+  },
+  {
+    "id": 4,
+    "login": "lvsmirnov",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Пользователь",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Активен",
+    "salaryAvailability": false
+  },
+  {
+    "id": 5,
+    "login": "appetrov",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Администратор",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Активен",
+    "salaryAvailability": true
+  },
+  {
+    "id": 6,
+    "login": "ivanov",
+    "email": "asidorov@vtb.ru",
+    "phone": "+7(916) 888-88-88",
+    "role": "Администратор",
+    "dateChange": "11.02.2019",
+    "dateCreation": "01.02.2019",
+    "status": "Заблокирован",
+    "salaryAvailability": false
+  }
+]
