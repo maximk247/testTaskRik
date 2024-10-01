@@ -1,0 +1,122 @@
+<form [formGroup]="filterForm" (ngSubmit)="onSubmit()" class="filter-form">
+  <div class="filter-form__main">
+    <div class="filter-form__title">Фильтр</div>
+    <div class="filter-form__container">
+      <!-- Поле логина -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Логин</mat-label>
+        <input matInput formControlName="login" />
+        <button
+          *ngIf="filterForm.get('login')?.value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearField('login')">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-error *ngIf="filterForm.get('login')?.hasError('pattern')">
+          Логин может содержать только буквы и цифры
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Поле телефона -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Телефон</mat-label>
+        <input matInput formControlName="phone" />
+        <button
+          *ngIf="filterForm.get('phone')?.value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearField('phone')">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-error *ngIf="filterForm.get('phone')?.hasError('pattern')">
+          Неверный формат телефона
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Дата создания -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Дата создания</mat-label>
+        <input
+          matInput
+          formControlName="dateCreation"
+          [matDatepicker]="picker1" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Поле статуса -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Статус</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="Активен">Активен</mat-option>
+          <mat-option value="Заблокирован">Заблокирован</mat-option>
+        </mat-select>
+        <mat-error *ngIf="filterForm.get('status')?.hasError('pattern')">
+          Неверный статус
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Поле Email -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <button
+          *ngIf="filterForm.get('email')?.value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearField('email')">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-error *ngIf="filterForm.get('email')?.hasError('email')">
+          Неверный формат email
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Поле роли -->
+      <mat-form-field
+        appearance="outline"
+        class="filter-form__item filter-form__item--small">
+        <mat-label>Роль</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="Пользователь">Пользователь</mat-option>
+          <mat-option value="Администратор">Администратор</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Дата изменения -->
+      <mat-form-field appearance="outline" class="filter-form__item">
+        <mat-label>Дата изменения</mat-label>
+        <input
+          matInput
+          formControlName="dateChange"
+          [matDatepicker]="picker2" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+        <mat-error *ngIf="filterForm.get('dateChange')?.hasError('pattern')">
+          Неверный формат даты
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Кнопки управления -->
+      <div class="filter-form__actions">
+        <button mat-raised-button color="primary" type="submit">
+          Применить
+        </button>
+        <button mat-raised-button type="button" (click)="onCancel()">
+          Отмена
+        </button>
+        <button mat-raised-button type="button" (click)="onReset()">
+          Сбросить
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

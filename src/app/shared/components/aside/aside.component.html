@@ -1,0 +1,63 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" mode="side" opened>
+    <div class="sidenav-header">
+      <div class="header">
+        <div class="header-container">
+          <h3 class="header-title">Суперагент</h3>
+          <mat-icon class="header-icon">arrow_drop_down</mat-icon>
+        </div>
+        <p class="header-subtitle">Банк ВТБ(ПАО)</p>
+      </div>
+    </div>
+
+    <mat-nav-list>
+      <!-- Группа "Управление" -->
+      <div class="menu-group">
+        <a
+          mat-list-item
+          (click)="toggleMenu()"
+          class="group-header"
+          [ngClass]="{ 'active-group': isMenuOpen }">
+          <mat-icon class="menu-icon">work_outline</mat-icon>
+          <span class="group-title">Управление</span>
+        </a>
+
+        <!-- Подкатегории -->
+        <div class="nested-menu" *ngIf="isMenuOpen">
+          <a
+            mat-list-item
+            routerLink="/user-list"
+            routerLinkActive="active"
+            class="nested-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <span>Карточка контрагента</span>
+          </a>
+          <a
+            mat-list-item
+            routerLink="/contracts"
+            routerLinkActive="active"
+            class="nested-link"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <span>Договоры контрагента</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Субагенты -->
+      <div class="menu-group">
+        <a
+          mat-list-item
+          routerLink="/subagents"
+          routerLinkActive="active"
+          class="group-header">
+          <mat-icon class="menu-icon">supervised_user_circle</mat-icon>
+          <span class="group-title">Субагенты</span>
+        </a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="main-content">
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

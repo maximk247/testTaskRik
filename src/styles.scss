@@ -1,48 +1,162 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
+// Импортируем стили Angular Material
+@import "~@angular/material/theming";
 
-// Plus imports for other components in your app.
+@font-face {
+  font-family: "Moscow Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/moscowsansregular.ttf") format("truetype");
+}
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core;
+// Включение базовых стилей Material
+@include mat-core;
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$test-task-rik-primary: mat.define-palette(mat.$indigo-palette);
-$test-task-rik-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// Настройка кастомной типографики
+$custom-typography: mat-typography-config(
+  $font-family: "Moscow Sans, Arial, sans-serif",
+  $display-4: mat-typography-level(96px, 112px, 300),
+  $display-3: mat-typography-level(60px, 96px, 300),
+  $display-2: mat-typography-level(48px, 64px, 400),
+  $display-1: mat-typography-level(34px, 48px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 24px, 400),
+  $subheading-1: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(16px, 24px, 400),
+  $body-2: mat-typography-level(14px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $input: mat-typography-level(16px, 1.125, 400)
+);
 
-// The warn palette is optional (defaults to red).
-$test-task-rik-warn: mat.define-palette(mat.$red-palette);
+// Кастомные палитры
+$primary-color: (
+  50: #fdecea,
+  100: #f9c8c3,
+  200: #f69d99,
+  300: #f07270,
+  400: #ed5251,
+  500: #da2032,
+  600: #cc1b2c,
+  700: #bb1325,
+  800: #aa0e20,
+  900: #8a0a16,
+  A100: #fff,
+  A200: #ffdde0,
+  A400: #ffb0b6,
+  A700: #ff969e,
+  contrast: (
+    50: rgb(0 0 0 / 87%),
+    100: rgb(0 0 0 / 87%),
+    200: rgb(0 0 0 / 87%),
+    300: rgb(0 0 0 / 87%),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgb(0 0 0 / 87%),
+    A200: rgb(0 0 0 / 87%),
+    A400: rgb(0 0 0 / 87%),
+    A700: rgb(0 0 0 / 87%)
+  )
+);
+$aside-color: (
+  50: #f1f3f4,
+  100: #d3d8db,
+  200: #b3bcc2,
+  300: #939fa9,
+  400: #7a8a95,
+  500: #666f78,
+  600: #5e666f,
+  700: #545a64,
+  800: #4b4f5a,
+  900: #3b3e48,
+  A100: #d7d9da,
+  A200: #aeb2b5,
+  A400: #838a8f,
+  A700: #6d757b,
+  contrast: (
+    50: rgb(0 0 0 / 87%),
+    100: rgb(0 0 0 / 87%),
+    200: rgb(0 0 0 / 87%),
+    300: rgb(0 0 0 / 87%),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgb(0 0 0 / 87%),
+    A200: rgb(0 0 0 / 87%),
+    A400: rgb(0 0 0 / 87%),
+    A700: rgb(0 0 0 / 87%)
+  )
+);
+$test-task-rik-primary: mat-palette($primary-color);
+$test-task-rik-aside-bg: mat-palette($aside-color);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$test-task-rik-theme: mat.define-light-theme(
+// Тема с кастомной типографикой
+$test-task-rik-theme: mat-light-theme(
   (
     color: (
       primary: $test-task-rik-primary,
-      accent: $test-task-rik-accent,
-      warn: $test-task-rik-warn,
+      accent: $test-task-rik-aside-bg,
+      warn: mat-palette($mat-red)
     ),
+    typography: $custom-typography // Применение кастомной типографики
   )
 );
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($test-task-rik-theme);
+// Применение темы ко всем компонентам
+@include angular-material-theme($test-task-rik-theme);
 
-/* You can add global styles to this file, and also import other style files */
+.mat-header-cell {
+  color: white;
+  background-color: mat-color($test-task-rik-primary);
+}
+
+.mat-h3,
+.mat-subheading-2,
+.mat-typography h3 {
+  font-family: "Moscow Sans", Arial, sans-serif !important;
+}
+
+.mat-cell {
+  padding: 16px;
+}
+
+.mat-list-base .mat-list-item {
+  color: inherit;
+}
+
+.mat-sidenav {
+  padding: 20px;
+  color: white;
+  background-color: mat-color($test-task-rik-aside-bg);
+}
+
+.mat-raised-button {
+  color: #818990;
+  background: #f0f1f1;
+  border-radius: 8px !important;
+}
+
+.mat-raised-button:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Moscow Sans", Arial, sans-serif !important;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

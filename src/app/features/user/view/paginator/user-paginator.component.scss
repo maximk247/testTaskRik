@@ -1,0 +1,21 @@
+::ng-deep .mat-paginator {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+::ng-deep .mat-paginator-page-size {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .mat-paginator-page-size-label {
+  margin-right: 8px;
+  color: black;
+}
+
+::ng-deep .mat-paginator-page-size::after {
+  content: " записей";
+  margin-left: 8px;
+  font-size: 14px;
+  color: black;
+}

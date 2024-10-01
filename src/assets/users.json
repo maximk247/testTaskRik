@@ -8,7 +8,7 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Активен",
-    "salaryAvailability": true
+    "digitalSignature": true
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Активен",
-    "salaryAvailability": true
+    "digitalSignature": true
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Заблокирован",
-    "salaryAvailability": true
+    "digitalSignature": true
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Активен",
-    "salaryAvailability": false
+    "digitalSignature": false
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Активен",
-    "salaryAvailability": true
+    "digitalSignature": true
   },
   {
     "id": 6,
@@ -63,6 +63,270 @@
     "dateChange": "11.02.2019",
     "dateCreation": "01.02.2019",
     "status": "Заблокирован",
-    "salaryAvailability": false
+    "digitalSignature": false
+  },
+  {
+    "id": 7,
+    "login": "msidorov",
+    "email": "msidorov@vtb.ru",
+    "phone": "+7(916) 123-45-67",
+    "role": "Пользователь",
+    "dateChange": "11.03.2019",
+    "dateCreation": "01.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 8,
+    "login": "nvvolkov",
+    "email": "nvvolkov@vtb.ru",
+    "phone": "+7(916) 234-56-78",
+    "role": "Администратор",
+    "dateChange": "12.03.2019",
+    "dateCreation": "02.03.2019",
+    "status": "Активен",
+    "digitalSignature": false
+  },
+  {
+    "id": 9,
+    "login": "ppetrova",
+    "email": "ppetrova@vtb.ru",
+    "phone": "+7(916) 345-67-89",
+    "role": "Пользователь",
+    "dateChange": "13.03.2019",
+    "dateCreation": "03.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": true
+  },
+  {
+    "id": 10,
+    "login": "dvasilev",
+    "email": "dvasilev@vtb.ru",
+    "phone": "+7(916) 456-78-90",
+    "role": "Администратор",
+    "dateChange": "14.03.2019",
+    "dateCreation": "04.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 11,
+    "login": "akuznetsov",
+    "email": "akuznetsov@vtb.ru",
+    "phone": "+7(916) 567-89-01",
+    "role": "Пользователь",
+    "dateChange": "15.03.2019",
+    "dateCreation": "05.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": false
+  },
+  {
+    "id": 12,
+    "login": "vpopov",
+    "email": "vpopov@vtb.ru",
+    "phone": "+7(916) 678-90-12",
+    "role": "Пользователь",
+    "dateChange": "16.03.2019",
+    "dateCreation": "06.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 13,
+    "login": "sivanova",
+    "email": "sivanova@vtb.ru",
+    "phone": "+7(916) 789-01-23",
+    "role": "Администратор",
+    "dateChange": "17.03.2019",
+    "dateCreation": "07.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 14,
+    "login": "rsergeev",
+    "email": "rsergeev@vtb.ru",
+    "phone": "+7(916) 890-12-34",
+    "role": "Пользователь",
+    "dateChange": "18.03.2019",
+    "dateCreation": "08.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": false
+  },
+  {
+    "id": 15,
+    "login": "eandreeva",
+    "email": "eandreeva@vtb.ru",
+    "phone": "+7(916) 901-23-45",
+    "role": "Пользователь",
+    "dateChange": "19.03.2019",
+    "dateCreation": "09.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 16,
+    "login": "gvoronov",
+    "email": "gvoronov@vtb.ru",
+    "phone": "+7(916) 012-34-56",
+    "role": "Администратор",
+    "dateChange": "20.03.2019",
+    "dateCreation": "10.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": true
+  },
+  {
+    "id": 17,
+    "login": "fpavlov",
+    "email": "fpavlov@vtb.ru",
+    "phone": "+7(916) 123-45-67",
+    "role": "Пользователь",
+    "dateChange": "21.03.2019",
+    "dateCreation": "11.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 18,
+    "login": "agalina",
+    "email": "agalina@vtb.ru",
+    "phone": "+7(916) 234-56-78",
+    "role": "Администратор",
+    "dateChange": "22.03.2019",
+    "dateCreation": "12.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": false
+  },
+  {
+    "id": 19,
+    "login": "tmelnikov",
+    "email": "tmelnikov@vtb.ru",
+    "phone": "+7(916) 345-67-89",
+    "role": "Пользователь",
+    "dateChange": "23.03.2019",
+    "dateCreation": "13.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 20,
+    "login": "blarionov",
+    "email": "blarionov@vtb.ru",
+    "phone": "+7(916) 456-78-90",
+    "role": "Пользователь",
+    "dateChange": "24.03.2019",
+    "dateCreation": "14.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": false
+  },
+  {
+    "id": 21,
+    "login": "zkolosov",
+    "email": "zkolosov@vtb.ru",
+    "phone": "+7(916) 567-89-01",
+    "role": "Администратор",
+    "dateChange": "25.03.2019",
+    "dateCreation": "15.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 22,
+    "login": "dnazarov",
+    "email": "dnazarov@vtb.ru",
+    "phone": "+7(916) 678-90-12",
+    "role": "Пользователь",
+    "dateChange": "26.03.2019",
+    "dateCreation": "16.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": true
+  },
+  {
+    "id": 23,
+    "login": "dmorozov",
+    "email": "dmorozov@vtb.ru",
+    "phone": "+7(916) 789-01-23",
+    "role": "Пользователь",
+    "dateChange": "27.03.2019",
+    "dateCreation": "17.03.2019",
+    "status": "Активен",
+    "digitalSignature": false
+  },
+  {
+    "id": 24,
+    "login": "ipetrov",
+    "email": "ipetrov@vtb.ru",
+    "phone": "+7(916) 890-12-34",
+    "role": "Администратор",
+    "dateChange": "28.03.2019",
+    "dateCreation": "18.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 25,
+    "login": "kborisov",
+    "email": "kborisov@vtb.ru",
+    "phone": "+7(916) 901-23-45",
+    "role": "Пользователь",
+    "dateChange": "29.03.2019",
+    "dateCreation": "19.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": true
+  },
+  {
+    "id": 26,
+    "login": "ypetrov",
+    "email": "ypetrov@vtb.ru",
+    "phone": "+7(916) 012-34-56",
+    "role": "Администратор",
+    "dateChange": "30.03.2019",
+    "dateCreation": "20.03.2019",
+    "status": "Активен",
+    "digitalSignature": false
+  },
+  {
+    "id": 27,
+    "login": "tgrigoriev",
+    "email": "tgrigoriev@vtb.ru",
+    "phone": "+7(916) 123-45-67",
+    "role": "Пользователь",
+    "dateChange": "31.03.2019",
+    "dateCreation": "21.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": true
+  },
+  {
+    "id": 28,
+    "login": "vyakovlev",
+    "email": "vyakovlev@vtb.ru",
+    "phone": "+7(916) 234-56-78",
+    "role": "Администратор",
+    "dateChange": "01.04.2019",
+    "dateCreation": "22.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
+  },
+  {
+    "id": 29,
+    "login": "vsokolov",
+    "email": "vsokolov@vtb.ru",
+    "phone": "+7(916) 345-67-89",
+    "role": "Пользователь",
+    "dateChange": "02.04.2019",
+    "dateCreation": "23.03.2019",
+    "status": "Заблокирован",
+    "digitalSignature": false
+  },
+  {
+    "id": 30,
+    "login": "esmirnov",
+    "email": "esmirnov@vtb.ru",
+    "phone": "+7(916) 456-78-90",
+    "role": "Администратор",
+    "dateChange": "03.04.2019",
+    "dateCreation": "24.03.2019",
+    "status": "Активен",
+    "digitalSignature": true
   }
 ]

@@ -1,0 +1,21 @@
+<div class="toolbar">
+  <div class="toolbar__actions">
+    <button mat-raised-button color="primary" (click)="onAddUser()">
+      Добавить <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" (click)="onUnblockLocalStorage()">
+      Разблокировать <mat-icon>check_circle_outline</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" (click)="onBlockLocalStorage()">
+      Заблокировать <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+
+  <button
+    mat-raised-button
+    class="toolbar__filter"
+    [ngClass]="{ 'toolbar__filter--active': isFilterVisible }"
+    (click)="onToggleFilter()">
+    <mat-icon>filter_list</mat-icon> Фильтр
+  </button>
+</div>

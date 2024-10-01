@@ -1,0 +1,37 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 70px;
+  padding: 10px 20px;
+
+  color: white;
+
+  background-color: #d32f2f;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-user mat-icon {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  font-size: 32px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 700;
+}

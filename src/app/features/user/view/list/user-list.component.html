@@ -1,0 +1,74 @@
+<div class="user-list">
+  <app-back class="user-list__back"></app-back>
+  <span class="user-list__title">
+    Настройка учетных записей сотрудников контрагента
+  </span>
+
+  <!-- Кнопки управления -->
+  <app-user-actions
+    class="user-list__actions"
+    [isFilterVisible]="isFilterVisible"
+    (addUser)="addUser()"
+    (blockLocaleStorage)="blockLocalStorage()"
+    (unblockLocaleStorage)="unblockLocalStorage()"
+    (toggleFilter)="toggleFilter()">
+  </app-user-actions>
+
+  <!-- Фильтр пользователей -->
+  <div *ngIf="isFilterVisible" class="user-list__filter-container">
+    <app-user-filter
+      class="user-list__filter"
+      (applyFilter)="onFilterChange($event)"
+      (cancelFilter)="onCancelFilter()">
+    </app-user-filter>
+  </div>
+
+  <!-- Контейнер таблицы пользователей -->
+  <div class="user-list__table-container">
+    <!-- Верхний пагинатор -->
+    <div class="user-list__pagination-container">
+      <app-user-paginator
+        class="user-list__paginator"
+        [length]="length"
+        [pageSize]="pageSize"
+        [pageIndex]="currentPage"
+        [pageSizeOptions]="[5, 10, 20]"
+        (pageChange)="onPageChange($event)">
+      </app-user-paginator>
+
+      <div class="user-list__selected-count">
+        Количество выбранных записей: {{ selectedUsers.length }}
+      </div>
+    </div>
+
+    <!-- Таблица пользователей -->
+    <app-user-table
+      *ngIf="pagedUsers$ | async as users; else noData"
+      class="user-list__table"
+      [users]="users"
+      (toggleBlock)="onToggleBlock($event)"
+      (selectedUsersChange)="onUsersSelected($event)">
+    </app-user-table>
+
+    <!-- Нижний пагинатор -->
+    <div class="user-list__pagination-container">
+      <app-user-paginator
+        class="user-list__paginator"
+        [length]="length"
+        [pageSize]="pageSize"
+        [pageIndex]="currentPage"
+        [pageSizeOptions]="[5, 10, 20]"
+        (pageChange)="onPageChange($event)">
+      </app-user-paginator>
+
+      <div class="user-list__selected-count">
+        Количество выбранных записей: {{ selectedUsers.length }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Шаблон для отсутствия данных -->
+  <ng-template #noData>
+    <p class="user-list__no-data">No users available.</p>
+  </ng-template>
+</div>

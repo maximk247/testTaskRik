@@ -1,3 +1,11 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-clean-order"],
+  "rules": {
+    "selector-pseudo-element-no-unknown": [
+      true,
+      { "ignorePseudoElements": ["ng-deep"] }
+    ]
+  },
+  "eslintIgnore": ["**/*.scss"]
 }
