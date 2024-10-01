@@ -5,7 +5,7 @@ import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
+  templateUrl: './user-list.component.html'
 })
 export class UserListComponent implements OnInit {
   public displayedColumns: Array<string> = [
@@ -17,7 +17,7 @@ export class UserListComponent implements OnInit {
     'dateChange',
     'dateCreation',
     'salaryAvailability',
-    'actions',
+    'actions'
   ];
   public dataSource = new MatTableDataSource<any>();
 
